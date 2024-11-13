@@ -39,7 +39,8 @@ const dragons = ref(dragonData);
   <TheHeader></TheHeader>
   <TheNav></TheNav>
   <main><!-- Her skal vi vise vores "undersider" -->
-  <RouterView></RouterView>
+  <!-- bruger her defineProps til at sende dragons variabel til vores homeView. Det er vigtigt med : ellers virker det ikke -->
+  <RouterView :dragons="dragons"></RouterView>
   </main>
 </template>
 
